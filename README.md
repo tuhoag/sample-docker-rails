@@ -2,8 +2,8 @@
 In this repository, I create a simple rails and docker setup. Feel free to customize it for your needs.
 
 ## Required Software
-[x] Docker
-[x] Docker Compose
+- [x] Docker
+- [x] Docker Compose
 
 ## Installation
 - Clone the repository.
