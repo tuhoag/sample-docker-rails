@@ -1,0 +1,17 @@
+version: '3'
+services:
+  webapp:
+    build: .
+    volumes:
+      - .:/webapp
+    ports:
+      - 3000:3000
+    container_name: webapp
+    links:
+      - db
+    command: bundle exec "rm /webapp/tmp/pids/server.pid && bundle install && rails s -b 0.0.0.0"
+    env_file: .env
+  db:
+    image: postgres
+    container_name: db
+    env_file: .env
