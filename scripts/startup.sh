@@ -1,6 +1,6 @@
 #!/bin/bash
 # Startup scripts
-rm -f /web/tmp/pids/server.pid
+rm -f /webapp/tmp/pids/server.pid
 bundle install
 rails db:create
 rails db:migrate
