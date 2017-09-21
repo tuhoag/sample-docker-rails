@@ -11,6 +11,8 @@ services:
       - db
     command: sh /webapp/scripts/startup.sh
     env_file: .env
+    stdin_open: true
+    tty: true
   db:
     image: postgres
     container_name: db
