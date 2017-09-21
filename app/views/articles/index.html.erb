@@ -1,7 +1,9 @@
+<%= render partial: 'flash_message', locals: {messages: flash} %>
+
 <h1>Articles</h1>
 <%= @articles.count %> articles
-<ul>
+
 <% @articles.each do |article| %>
-  <li><%=article.id%> - <%=article.title%></li>
+	<%= render partial: "thumbnail", locals: {a: article}%>
 <% end %>
-</ul>
+

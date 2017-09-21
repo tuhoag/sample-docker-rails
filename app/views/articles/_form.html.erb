@@ -1,0 +1,11 @@
+<%= form_with(model: article, local: true) do |f| %>
+<div class="form-group">
+	<label>Title</label>
+	<%= f.text_field :title, class: 'form-control' %>
+</div>
+<div class="form-group">
+	<label>Body</label>
+	<%= f.text_area :body, class: 'form-control' %>
+</div>
+<button type="submit" class="btn btn-primary"><%= fa_icon "save" %> Save </button>
+<% end %>

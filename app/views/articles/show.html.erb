@@ -1,6 +1,28 @@
-comments
-<ul>
-  <% @article.comments.each do |comment| %>
-    <li><%= comment.body %></li>
-  <% end %>
-</ul>
+<div class="row">
+	<div class="col-md-12">
+		<%= render partial: "thumbnail", locals: {a: @article} %>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<%= link_to edit_article_path(@article.id), class: 'btn btn-primary' do%>
+			<%= fa_icon "pencil" %>
+			Edit
+		<% end %>
+
+		<%= link_to articles_path, class: 'btn btn-secondary' do %>
+		Back
+		<% end %>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		comments
+		<ul>
+			<% @article.comments.each do |comment| %>
+			<li><%= comment.body %></li>
+			<% end %>
+		</ul>
+		
+	</div>
+</div>

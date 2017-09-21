@@ -1,0 +1,17 @@
+<div class="article-thumbnail">
+  <div class="card-body">
+    <h4 class="card-title">
+    	<%= link_to article_path(a.id), class: "card-title" do %>
+    		<%= a.title %>
+    	<% end %>
+    	</h4>
+    <h6 class="card-subtitle mb-2 text-muted"><%= a.user.name %></h6>
+    <p class="card-text">
+    	<%= truncate(a.body) %>	
+    	</p>
+
+    <%= link_to article_path(a.id), class: 'card-link', remote: true, method: :delete do %> 
+    	Delete
+    <% end %>
+  </div>
+</div>
