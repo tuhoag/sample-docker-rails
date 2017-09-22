@@ -18,11 +18,9 @@
 <div class="row">
 	<div class="col-md-12">
 		comments
-		<%= link_to article_comments_path(@article.id), remote: true, method: :get, class: "btn btn-success" do %>
-			Load Comments
-		<% end %>
-
 		<ul id="comments">
 		</ul>
 	</div>
 </div>
+
+<input type='hidden' id="articleId" value="<%= @article.id %>">

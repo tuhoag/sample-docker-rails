@@ -1,7 +1,5 @@
 (function() {
-	
+	var html = '<%= @comments.reduce("") { |r, c| "#{r}<li highlight>#{c.body}</li>" }.html_safe %>';
 
-	let html = "<%= @comments.reduce("") do { |r, c| r + '<li highlight>' + c.body + '</li>' %> }";
-	
 	$("#comments").html(html);
 })();
