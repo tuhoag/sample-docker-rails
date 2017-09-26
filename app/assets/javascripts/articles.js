@@ -13,9 +13,9 @@ $(document).on('turbolinks:load', function() {
     //   $(this).removeClass("article-highlight");
     // });
 
-    let articleId = $("#articleId").val();
+    let articleId1 = $("#articleId").val();
 
-    $.get('/articles/' + articleId + '/comments').done(function(){
+    $.get('/articles/' + articleId1 + '/comments').done(function(){
 
     }).fail(function() {
     	console.log('errors');
