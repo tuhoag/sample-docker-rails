@@ -3,7 +3,7 @@ Article.delete_all
 Comment.delete_all
 
 (1..10).each do |user_num|
-  user = User.create!(name: Faker::Name.name)
+  user = User.create!(name: Faker::Name.name, email:'hatu87@gmail.com', password: '123')
 
   (1..10).each do |article_num|
     article = user.articles.create!(title: Faker::Lorem.sentence, body: Faker::Lorem.paragraph(10))
