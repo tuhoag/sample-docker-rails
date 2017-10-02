@@ -1,7 +1,4 @@
 class User < ApplicationRecord
-  validates_presence_of :name
-  validates :email, presence: true
-
   has_many :articles
 
 	has_secure_password

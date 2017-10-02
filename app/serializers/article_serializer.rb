@@ -4,10 +4,10 @@ class ArticleSerializer < ActiveModel::Serializer
   belongs_to :user, key: :author, serializer: AuthorSerializer
 
   def body
-  	object.body.truncate(50)
+  	object.body.truncate(50)	
   end
 
   def comments_count
-  	object.comments.count
+  	object.comments.count	
   end
 end

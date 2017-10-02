@@ -1,10 +1,7 @@
 class CommentSerializer < ActiveModel::Serializer
-  attributes :id, :body, :user_id
-
-  
-  attribute :author
+  attributes :id, :body, :author
 
   def author
-  	AuthorSerializer.new(object.user, { root: false })
+  	AuthorSerializer.new(object.user)
   end
 end
