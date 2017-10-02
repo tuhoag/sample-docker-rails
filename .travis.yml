@@ -1,0 +1,13 @@
+language: ruby
+rvm:
+  - 2.4.2
+before_script:
+  - bundle exec rails db:create --all
+  - bundle exec rails db:migrate
+  - bundle exec rails db:seed
+script:
+  - bundle exec rails ci:test
+services:
+  - postgresql
+notifications:
+  email: false
