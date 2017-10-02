@@ -24,11 +24,14 @@ gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
+
 gem 'bootstrap', '~> 4.0.0.beta'
 gem 'jquery-rails'
 gem 'faker'
 gem "font-awesome-rails"
+gem 'active_model_serializers'
+#gem 'rspec'
+gem 'rspec-rails'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
