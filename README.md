@@ -2,7 +2,7 @@
 In this repository, I create a simple rails and docker setup. Feel free to customize it for your needs.
 
 ## Code Status
-[img](https://travis-ci.org/hatu87/test-cli.svg?branch=master)
+[img](https://travis-ci.org/hatu87/test-cli.svg?branch=master) 
 
 ## Required Software
 - [x] Docker
