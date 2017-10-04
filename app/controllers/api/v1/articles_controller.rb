@@ -1,6 +1,6 @@
 class Api::V1::ArticlesController < Api::V1::APIController
   def index
-    articles = Article.all
+    articles = Article.fetch_all
 
     render json: articles
   end

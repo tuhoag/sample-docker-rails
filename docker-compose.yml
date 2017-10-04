@@ -9,11 +9,18 @@ services:
     container_name: webapp
     links:
       - db
+      - redis
     command: sh /webapp/scripts/startup.sh
     env_file: .env
     stdin_open: true
     tty: true
+
   db:
     image: postgres
     container_name: db
     env_file: .env
+
+  redis:
+    image: redis
+    container_name: redis
+
