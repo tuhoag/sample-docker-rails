@@ -16,11 +16,11 @@ services:
     tty: true
 
   db:
-    image: postgres
+    image: postgres:10.0
     container_name: db
     env_file: .env
 
   redis:
-    image: redis
+    image: redis:3.2.11
     container_name: redis
 

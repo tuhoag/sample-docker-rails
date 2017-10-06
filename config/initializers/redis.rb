@@ -1,1 +1,1 @@
-$redis = Redis.new(host: 'redis')
+$redis = Redis.new(url: ENV["REDIS_DB"])
