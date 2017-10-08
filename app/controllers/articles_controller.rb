@@ -7,11 +7,11 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    
+
   end
 
   def edit
-    
+
   end
 
   def update
@@ -25,7 +25,7 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    
+
 
     begin
       @article.destroy!
@@ -37,7 +37,7 @@ class ArticlesController < ApplicationController
     end
   end
 
-  
+
 
   private
   def get_article

@@ -1,12 +1,12 @@
 class Article < ApplicationRecord
 	validates :title, presence: true
 	validates :body, presence: true
-	
+
   belongs_to :user
   has_many :comments
 
   after_save :clear_cache
-  
+
   def self.fetch_all
   	articles_json = $redis.get('articles')
 
