@@ -5,6 +5,11 @@
 </div>
 <div class="row">
 	<div class="col-md-12">
+		<%= render partial: 'shared/flash_message', locals: {messages: flash} %>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
 		<%= form_with scope: :session, local: true do |f|%>
 		<div class="form-group">
 			<label for="">

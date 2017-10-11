@@ -5,25 +5,17 @@ class User < ApplicationRecord
 
 	def self.authenticate!(session_params)
 		user = User.authenticate(session_params)
-
-		if user.nil?
-			raise RecordNotFound
-		else
-			user
-		end
+		raise ActiveRecord::RecordNotFound unless user
+		user
 	end
 
   def self.authenticate(session_params)
   	user = User.find_by(email: session_params[:email])
-  	
-  	if user.authenticate(session_params[:password])
-  		user
-  	else
-  		false
-  	end
+  	(user && user.authenticate(session_params[:password])) || false
   end
 
-  def self.authenticate?(session_params)
-  	!User.authenticate(session_params).nil?
+	def self.authenticate?(session_params)
+		result = User.authenticate(session_params)
+		result != false
   end
 end

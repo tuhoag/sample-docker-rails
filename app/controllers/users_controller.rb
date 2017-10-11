@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   	begin
   		user = User.create!(user_params)
   		flash[:success] = "Register successfully."
-  		redirect_to login_path	
+  		redirect_to login_path
   	rescue ActiveRecord::RecordInvalid => e
   		flash[:error] = "Cannot register new account."
   		render :new

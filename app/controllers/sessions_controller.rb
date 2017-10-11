@@ -1,9 +1,6 @@
 class SessionsController < ApplicationController
 	def new
-		
 	end
-
-	
 
 	def create
 		begin
@@ -19,7 +16,7 @@ class SessionsController < ApplicationController
 
 	def destroy
 			logout
-			
+
 			redirect_to login_path
 	end
 
