@@ -1,6 +1,20 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+  ## validations
+  it { should validate_presence_of(:name) }
+  it { should validate_presence_of(:email) }
+  it { should validate_uniqueness_of(:email) }
+  it { should validate_presence_of(:password_digest) }
+  it { should have_secure_password }
+
+  ## associations
+  it { should have_many(:articles) }
+  it { should have_many(:comments) }
+  it { should have_many(:messages) }
+  it { should have_many(:chat_rooms) }
+
+
   describe "authentication helpers" do
     let (:valid_credential) { { email: 'hatu87@gmail.com', password: '123'} }
     let (:invalid_credentials) do

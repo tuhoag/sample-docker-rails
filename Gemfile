@@ -48,6 +48,7 @@ group :development, :test do
   gem 'rspec-rails', '3.6.1'
   gem 'faker', '1.8.4'
   gem 'factory_girl_rails', '4.8.0'
+  gem 'shoulda-matchers', '3.1.2'
   gem 'gemrat'
 end
 
@@ -62,5 +63,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-
