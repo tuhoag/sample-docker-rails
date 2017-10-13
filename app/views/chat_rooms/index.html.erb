@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-12">
+    <%= render partial: 'shared/flash_message', locals: {messages: flash} %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <h1>Chat Rooms</h1>
+    <ul class="list-group">
+    <% @chat_rooms.each do |room| %>
+      <li class="list-group-item"><%= link_to room.title, chat_room_path(room.id) %></li>
+    <% end %>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <%= link_to "Create Room", new_chat_room_path, class: 'btn btn-primary' %>
+  </div>
+</div>

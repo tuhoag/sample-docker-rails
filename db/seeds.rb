@@ -2,8 +2,10 @@ User.delete_all
 Article.delete_all
 Comment.delete_all
 
+User.create!(name: 'Tu Hoang', email:'hatu87@gmail.com', password: '123')
+
 (1..10).each do |user_num|
-  user = User.create!(name: Faker::Name.name, email:'hatu87@gmail.com', password: '123')
+  user = User.create!(name: Faker::Name.name, email: Faker::Internet.email, password: '123')
 
   (1..10).each do |article_num|
     article = user.articles.create!(title: Faker::Lorem.sentence, body: Faker::Lorem.paragraph(10))

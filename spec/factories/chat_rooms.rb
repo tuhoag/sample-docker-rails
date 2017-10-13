@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :chat_room do
-    title "MyString"
+    title Faker::Lorem.sentence
   end
 end

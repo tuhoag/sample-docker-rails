@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
 	namespace :api do
 		namespace :v1 do
 			resources :articles, only: [:index, :show] do
@@ -16,8 +15,13 @@ Rails.application.routes.draw do
 
   #get '/articles', to: 'articles#index'
   resources :articles, only: [:index, :show, :edit, :update, :destroy] do
-  	resources :comments, only: [:index]	
+  	resources :comments, only: [:index]
   end
 
-  resources :photos, only: [:index]
+	resources :chat_rooms, only: [:index, :create, :show, :new] do
+		resources :messages, only: [:create]
+	end
+	resources :photos, only: [:index]
+
+
 end

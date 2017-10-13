@@ -1,6 +1,5 @@
 FactoryGirl.define do
   factory :message do
-    content "MyString"
-    user ""
+    content Faker::Lorem.sentence
   end
 end

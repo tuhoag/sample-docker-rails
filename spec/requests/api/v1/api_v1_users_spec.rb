@@ -9,7 +9,7 @@ RSpec.describe "Api::V1::Users", type: :request do
 
     it "should return all users" do
     	User.create(name: 'abc', email: 'abc@mail.vn', password: '123')
-    	User.create(name: 'abc', email: 'abc@mail.vn', password: '123')
+    	User.create(name: 'abc', email: 'abc1@mail.vn', password: '123')
 
     	get '/api/v1/users'
     	#byebug

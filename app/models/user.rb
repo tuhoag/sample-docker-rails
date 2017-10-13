@@ -24,5 +24,9 @@ class User < ApplicationRecord
 	def self.authenticate?(session_params)
 		result = User.authenticate(session_params)
 		result != false
-  end
+	end
+
+	def self.online
+		all
+	end
 end
