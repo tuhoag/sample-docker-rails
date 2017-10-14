@@ -20,6 +20,7 @@ class ChatRoomsController < ApplicationController
     begin
       room = ChatRoom.create!(chat_room_params)
       room.messages.create!(content: 'hi', user_id: current_user.id)
+      RoomChannel.broadcast_to(current_user, message: 'hello')
       redirect_to chat_room_path(room.id)
     rescue ActiveRecord::RecordInvalid => e
       flash[:error] = "Cannot create chat room, please try again."

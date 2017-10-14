@@ -30,8 +30,8 @@ gem "font-awesome-rails", '4.7.0.2'
 gem 'active_model_serializers', '0.10.6'
 
 # Use Redis adapter to run Action Cable in production
-gem 'redis-rails', '5.0.2'
-gem 'redis', '4.0.1'
+# gem 'redis-rails'
+gem 'redis', '~> 3.0.0'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'

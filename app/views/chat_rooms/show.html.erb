@@ -9,12 +9,14 @@
       <div class="card-header">
         <%= @room.title %>
       </div>
+      <span id="messages">
       <% @room.messages.each do |message| %>
       <div class="card-body">
         <h4 class="card-title"><%= message.content %></h4>
         <p class="card-text"><%= message.user.name %></p>
       </div>
       <% end %>
+      </span>
     </div>
   </div>
 </div>
@@ -23,10 +25,12 @@
     <%= form_with model: Message.new, url: chat_room_messages_path(@room.id) do |f| %>
       <div class="form-group">
         <label for="">Message</label>
-        <%= f.text_field :content, class: 'form-control' %>
+        <%= f.text_field :content, class: 'form-control', id: 'message-content' %>
       </div>
+      <%= f.hidden_field :id, value: @room.id, id: "roomId" %>
 
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn btn-primary" message-submit>Send</button>
     <% end %>
   </div>
-</div>
+</div
+

@@ -1,6 +1,6 @@
 module SessionsHelper
 
-	def current_user		
+	def current_user
 		@current_user ||= User.find_by(id: session[:current_user_id])
 	end
 
@@ -12,6 +12,7 @@ module SessionsHelper
 
   def login(user)
 		session[:current_user_id] = user.id
+		cookies.signed[:current_user_id] = user.id
 	end
 
 	def logout
